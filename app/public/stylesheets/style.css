@@ -1,0 +1,83 @@
+body {
+  padding: 20px 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+*{
+	box-sizing:border-box;
+	line-height: 30px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+.result {
+    padding: 20px;
+    border: solid 1px #c5c5c5;
+    background: #fbfbfb;
+}
+
+.tb-detail td, .tb-detail th, .tb-kategori td, .tb-kategori th{
+	padding:5px;
+}
+
+.tb-detail td:first-child, .tb-detail th:first-child{
+	padding-left:0px;
+}
+
+.tb-kategori td, .tb-kategori th{
+	text-align:left;
+	border: solid 1px #000;
+}
+
+input, button, textarea, select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    border: solid 1px #d6d6d6;
+	outline: none;
+}
+
+button {
+    cursor: pointer;
+    background: #00bdff;
+    color: #fff;
+}
+
+.tb-bmi, .tb-detail, .tb-kategori, ul {
+    /* margin: 25px auto; */
+    width: 100%;
+}
+
+a.btn {
+    padding: 5px;
+    margin: 0 5px;
+    background: #d6d6d6;
+    text-decoration: none;
+    color: #000;
+}
+
+.text-center{
+	text-align:center;
+}
+
+th, td {
+    border: solid 1px #d6d6d6;
+    padding: 10px!important;
+}
+
+@media (max-width:667px){
+	body {
+		padding: 5px 10px;
+	}
+	
+	.tb-kategori{
+		width:100%;
+	}
+}

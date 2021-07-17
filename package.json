@@ -1,0 +1,28 @@
+{
+  "name": "uas",
+  "version": "1.0.0",
+  "description": "UAS PEMROGRAMAN WEB - 17083000083",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "UAS",
+    "PEMROGRAMAN",
+    "WEB",
+    "-",
+    "RESTFUL",
+    "API",
+    "CRUD",
+    "EXPRESSJS"
+  ],
+  "author": "Mas Isal",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jade": "^1.11.0",
+    "mongoose": "^5.13.2",
+    "pug": "^3.0.2"
+  }
+}

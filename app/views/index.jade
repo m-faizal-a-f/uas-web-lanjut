@@ -1,0 +1,53 @@
+extends layout
+
+block content
+	//HEADER
+	h1(style='text-align:center')
+		a(href='#{baseUrl}', style='text-decoration:none;')= title
+	p
+		center By : Mokhamad Faizal Ali Fahmi 
+			b ( 17083000083 / 8B )
+			
+
+	//FORM
+	- var action = "";
+	- if (typeof(_id) !== 'undefined'){
+	-	action = '/notes/' + _id + '/update';
+	- }else{
+	-	action = '/notes';
+	- }
+	form(action='#{action}', method='post')
+		- if (typeof(_id) !== 'undefined'){
+			- var t,c = '';
+			- notesData.forEach(element => {
+			- 	if(element._id === _id){
+			- 		t = element.title
+			- 		c = element.content
+			- 	}
+			- });
+			input(type='text', name='title', placeholder='Title', value='#{t}')
+			textarea(name='content', placeholder='Content') #{c}
+		- }else{
+			input(type='text', name='title', placeholder='Title')
+			textarea(name='content', placeholder='Content')
+		- }
+		input(type='hidden', name='fromform' value='fromform')
+		button(type='submit', name='btn_submit') SUBMIT
+		
+		
+	//TABEL
+	- if (typeof(_id) === 'undefined'){
+		table(class='tb-detail')
+			tr
+				th Title
+				th Content
+				th Action
+			- notesData.forEach(element => {
+				tr
+					td #{element.title}
+					td #{element.content}
+					td(class='text-center')
+						a(href='#{baseUrl}notes/#{element._id}/update', class='btn') EDIT 
+						a(href='#{baseUrl}notes/#{element._id}/delete', class='btn') HAPUS
+			- });
+	- }
